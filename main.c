@@ -54,25 +54,24 @@ int main() {
             case '5':
                 printf("Oh, I like it so much. 'After' is my favourite book. But yours?\n");
                 break;
-            default:
-                printf("I asked you to choose a number!!\n");
         }
-
+        while ((c = getchar()) != '\n' && c != EOF);
         gets(s);
         printf("I like %s a little bit, it is nice.\n", s);
     }
     else
-        printf("I'm sorry to heard that, but I hope you will discover a book to like soon\n");
+        printf("I'm sorry to heard that, but I hope you will discover a book you soon.\n");
     printf("Do you practice any sport?\n");
+    gets(s);
     for (i = 0; i <= strlen(s) - 1; i++)
         s[i] = toupper(s[i]);
     if (strcmp(s, "YES") == 0) {
         printf("That's fine. Which sport?\n");
         gets(s);
-        printf("I like %s too\n", s);
+        printf("I like %s too.\n", s);
     } else
         printf("You should do that. It is important to your health!\n");
-    printf("I'm so sorry, but I don't have much power anymore. It was nice to talk to you. I'm glad I met you %s! See you soon!\n",
+    printf("I'm so sorry, but I don't have so much power anymore. It was nice to talk to you. I'm glad I met you %s! See you soon!\n",
            name);
     gets(s);
 
